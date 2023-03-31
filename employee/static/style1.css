@@ -1,0 +1,60 @@
+* {
+    text-decoration: none;
+}
+
+#divP {
+    background-color: rgb(255, 255, 255);
+    width: 20em;
+    height: 38em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 6.5em;
+    border: solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: 
+        linear-gradient(
+            60deg,
+            #c347e6,
+            #1780c2
+        );
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(118, 200, 221);
+
+}
+
+tr:hover {
+    transition: 0.5s;
+    background-color: rgb(161, 233, 233);
+}
+
+th {
+    background-color: #043eaa;
+    color: white;
+}
+
+button {
+    border-radius: 12px;
+    color: aqua;
+    background-color: #2a84c0;
+    cursor: pointer;
+}
+
+tbody a{
+    margin: 2px;
+    
+}
+
+tbody a:hover{
+    color: aliceblue;
+}
+
+td:hover{
+    transition: 0.5s;
+    background-color: #6a92dd;
+}
+

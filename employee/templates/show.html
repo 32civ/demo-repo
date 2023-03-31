@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+    {% load static %}
+    <link rel="stylesheet" href="../static/style1.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Numero del pedido</th>
+                <th>Nombre Del Pedido</th>
+                <th>Email del trabajador</th>
+                <th>Contact del trabajador</th>
+                <th>Direccion del pedido</th>
+                <th>Cantidad de productos</th>
+                <th>Eliminar</th>
+                <th>Editar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.eid }}</td>
+                <td>{{employee.ename}}</td>
+                <td>{{employee.eemail}}</td>
+                <td>{{employee.econtact}}</td>
+                <td>{{employee.direccion}}</td>
+                <td>{{employee.cantidad}}</td>
+                <td>
+                    <a href="/delete/{{employee.id}}" >Delete</a>
+                </td>
+                <td>
+                    <a href="/edit/{{ employee.id }}" >Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <button><a style="color:white;" href="/emp">Añadir nueva fila</a></button>
+</body>
+
+</html>
